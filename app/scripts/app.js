@@ -1,6 +1,10 @@
 'use strict';
 
-angular.module('buttercoinResourcesApp', [])
+var depedencies = [
+  'buttercoin.accounts'
+];
+
+angular.module('buttercoinResourcesApp', dependencies)
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

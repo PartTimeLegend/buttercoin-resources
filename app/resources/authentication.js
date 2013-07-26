@@ -45,8 +45,8 @@ angular.module('buttercoin.authenticator', [])
 
   requestToken = function(callback) {
 
-    var pathOauth = 'oauth/authorize',
-        responseType = 'token',
+    var pathOauth = 'dialog/authorize',
+        responseType = 'code',
         url;
 
     // Pass directly url in the iframe
