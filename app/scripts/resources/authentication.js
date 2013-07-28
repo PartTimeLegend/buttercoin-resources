@@ -46,7 +46,7 @@ angular.module('buttercoin.authenticator', [])
   requestToken = function(callback) {
 
     var pathOauth = 'dialog/authorize',
-        responseType = 'code',
+        responseType = 'token',
         url;
 
     // Pass directly url in the iframe
@@ -61,7 +61,7 @@ angular.module('buttercoin.authenticator', [])
           encodeURIComponent(responseType);
 
     tokenCallbacks.push(callback);
-
+    console.log("url", url);
     // Load the lightbox in the dom
     createLightBox(url);
   };
@@ -115,7 +115,7 @@ angular.module('buttercoin.authenticator', [])
   };
 
   logout = function (success, error) {
-    var url = getHostOauth() + 'oauth/revoke';
+    var url = getHostOauth() + 'logout';
     success = typeof success === 'function' ? success : function () {};
     error = typeof error === 'function' ? error : function () {};
 
