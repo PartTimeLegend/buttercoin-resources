@@ -23,7 +23,6 @@ angular.module('buttercoin.resource', ['buttercoin.api', 'bc-config'])
 
     // TODO: Expose paging support somehow
     var resourceUri = ButtercoinApiBaseUri + resourceName;
-    console.log("resourceUri:", resourceUri);
     ButtercoinApi.get(resourceUri, function(data) {
 
       var errorState = false;
@@ -54,7 +53,8 @@ angular.module('buttercoin.resource', ['buttercoin.api', 'bc-config'])
     error = typeof error === 'function' ? error : function () {};
 
     var resourceDetails;
-    var resourceUri = ButtercoinApiBaseUri + resourceName + '/' + id + '?format=json';
+    var resourceUri = ButtercoinApiBaseUri + resourceName + '/' + id;
+    console.log("resourceUri:", resourceUri);
     ButtercoinApi.get(resourceUri, function(data) {
 
       var errorState = false;
