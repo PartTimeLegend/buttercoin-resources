@@ -4,7 +4,7 @@
  *
  */
 'use strict';
-angular.module('buttercoin.resource', ['buttercoin.api', 'backoffice-config'])
+angular.module('buttercoin.resource', ['buttercoin.api', 'bc-config'])
 .constant('ButtercoinApiBaseUri', '')
 .factory('ButtercoinResource', function(ButtercoinApiBaseUri, ButtercoinApi, settings) {
 
