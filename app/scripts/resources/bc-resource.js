@@ -54,7 +54,6 @@ angular.module('buttercoin.resource', ['buttercoin.api', 'bc-config'])
 
     var resourceDetails;
     var resourceUri = ButtercoinApiBaseUri + resourceName + '/' + id;
-    console.log("resourceUri:", resourceUri);
     ButtercoinApi.get(resourceUri, function(data) {
 
       var errorState = false;
