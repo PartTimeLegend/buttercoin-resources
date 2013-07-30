@@ -59,6 +59,7 @@ angular.module('buttercoin.authenticator', [])
           encodeURIComponent(settings.redirectUri) +
           '&response_type=' +
           encodeURIComponent(responseType);
+    
     console.log ("authentication url", url);
     tokenCallbacks.push(callback);
     // Load the lightbox in the dom
