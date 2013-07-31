@@ -45,7 +45,7 @@ angular.module('buttercoin.authenticator', [])
 
   requestToken = function(callback) {
 
-    var pathOauth = 'dialog/authorize',
+    var pathOauth = 'oauth/token',
         responseType = 'token',
         url;
 
