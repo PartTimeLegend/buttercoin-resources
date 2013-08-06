@@ -130,10 +130,8 @@ angular.module('buttercoin.authenticator', [])
     })
     .success(function (json) {
       token = undefined;
-      var logoutUrl = json.logout_url;
-      logoutUrl += '?redirect_uri=' + settings.redirectUri;
-      logoutCallback = success;
-      createLightBox(logoutUrl);
+      delete http.defaults.headers.common.AUTHORIZATION;
+      success();
     })
     .error(function(data, status, headers, config) {
       error(data, status, headers, config);
