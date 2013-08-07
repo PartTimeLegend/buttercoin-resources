@@ -126,6 +126,7 @@ angular.module('buttercoin.authenticator', [])
     var body = 'token=' + encodeURIComponent(token) + '&token_type_hint=access_token&logout_url=true';
 
     $http.post(url, body, {
+      withCredentials: true,
       headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
     })
     .success(function (json) {
